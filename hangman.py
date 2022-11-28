@@ -173,7 +173,7 @@ def hangman(secret_word):
             print(f'Sorry, you ran out of guesses. The word was {secret_word}.')
             break 
 
-    pass
+    
 # When you've completed your hangman function, scroll down to the bottom
 # of the file and uncomment the first two lines to test
 #(hint: you might want to pick your own
@@ -209,19 +209,6 @@ def show_possible_matches(my_word):
              Therefore, the hidden letter(_ ) cannot be one of the letters in the word
              that has already been revealed.
               '''
-             
-    matching_words = ''
-    fl = True
-    for w in wordlist:
-        if match_with_gaps(my_word, w):
-            (str(w)).join(matching_words)
-            fl = True
-        else:
-            fl = False
-    if fl == True:
-        print(matching_words)
-    else:
-        print('No matches found')
     pass
         
 
@@ -310,6 +297,7 @@ def hangman_with_hints(secret_word):
         elif guesses_remaining == 0 :
             print(f'Sorry, you ran out of guesses. The word was {secret_word}.')
             break 
+    pass
 
 # When you've completed your hangman_with_hint function, comment the two similar
 # lines above that were used to run the hangman function, and then uncomment
@@ -324,5 +312,5 @@ if __name__ == "__main__":
     # uncomment the following two lines. 
     
     secret_word = choose_word(wordlist)
-    hangman_with_hints(secret_word)
+    hangman(secret_word)
     
